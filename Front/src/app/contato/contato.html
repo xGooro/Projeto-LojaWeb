@@ -1,0 +1,26 @@
+
+<div class="alert alert-success" *ngIf="mensagem.length>0">
+<b>{{mensagem}}</b>
+</div>
+<br>
+<div class="contato">
+    <h2>Contato</h2>
+<br>Preencha o formulário para nos contatar!<br>
+
+<br>
+nome:<input type="text" [(ngModel)]="nome" class="form-control"  placeholder="Digite seu nome completo" ><br>
+email:<input type="email" [(ngModel)]="email" class="form-control" placeholder="Digite seu Email"><br>
+telefone:<input type="text" [(ngModel)]="telefone" class="form-control" ><br>
+assunto:<select [(ngModel)]="titulo" class="form-control" >
+    <option>Problemas com produtos</option>
+    <option>Problemas com pedidos</option>
+    <option>Problemas com cadastros</option>
+    <option>Dúvidas e sugestões</option>
+</select><br>
+mensagem:<textarea row="5" col="80" [(ngModel)]="texto" class="form-control" placeholder="Digite sua mensagem"></textarea><br>
+<input type="checkbox" [(ngModel)]="copia"> Quero receber uma cópia do email<br>
+
+</div>
+<br><br>
+<button (click)="enviar();" class="btn-Enviar">Enviar</button>
+

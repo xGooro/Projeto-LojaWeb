@@ -1,0 +1,19 @@
+.login {
+  padding: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}   
+
+.btn {
+  background: #e28000;
+  border: none;
+  padding: 8px 15px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: #016924;
+}

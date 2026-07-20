@@ -1,0 +1,18 @@
+<div class="alert alert-success" *ngIf="mensagem.length>0">
+    {{mensagem}}
+</div>
+
+<div class="recupera">
+
+    <h2>Recuperar Senha</h2>
+    <br>Digite seu email para receber instruções de recuperação!<br>
+
+<br>
+    email:
+<input type="email" [(ngModel)]="obj.email" class="form-control">
+<br><br>
+<button class="btn btn-success" (click)="recuperarSenha();">
+    Recuperar Senha
+</button>
+
+</div>

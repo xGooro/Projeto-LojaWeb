@@ -1,0 +1,25 @@
+<div class="alert alert-info" *ngIf="mensagem.length>0">
+    {{mensagem}}
+</div>
+<div class="login">
+<div class="row">
+    <div class="col-md-6 col-sm-12" >
+        E-mail:
+        <input type="email" [(ngModel)]="obj.email" 
+         class="form-control"><br>
+        Senha:
+        <input type="password" [(ngModel)]="obj.senha"  
+        class="form-control"><br>
+        <button class="btn" (click)="fazerLogin();">
+            Entrar
+        </button>
+    </div> 
+    <div class="col-md-6 col-sm-12" >
+        Se você ainda não tem cadastro: <br>
+        <button class="btn" (click)="novoCadastro()">
+            Novo Cadastro</button><br><br>
+        Caso tenha esquecido sua senha:<br>
+        <a href="recupera" class="btn">Recuperar Senha</a><br><br>   
+    </div> 
+</div>
+</div>

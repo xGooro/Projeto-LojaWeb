@@ -1,0 +1,55 @@
+<div class="carrinho-container">
+
+  <h2 align="center">Seu carrinho</h2>
+
+  <div *ngIf="mensagem" style="background-color: #d4edda; color: #155724; padding: 15px; border-radius: 5px; text-align: center; margin-bottom: 20px; font-weight: bold; font-size: 1.2rem;">
+    {{ mensagem }}
+  </div>
+
+  <div *ngIf="lista.length === 0 && !mensagem" class="vazio" >
+    Seu carrinho está vazio 👀
+  </div>
+
+  <div *ngFor="let obj of lista" class="item-carrinho">
+
+    <img src="produto_{{obj.produto.codigo}}.jpg" width="100%" style="border-radius: 8px;"/>
+
+    <div class="info" >
+      <h4>{{obj.produto.nome}}</h4>
+      <h5>R$ {{obj.valor}}</h5>
+
+      <select [(ngModel)]="obj.tamanho" (change)="atualizarStorage()" class="tamanho">
+          <option value="">Tamanho</option>
+          <option value="P">P</option>
+          <option value="M">M</option>
+          <option value="G">G</option>
+          <option value="GG">GG</option>
+      </select>
+
+      <div class="quantidade">
+        <button class="btn-quantidade" (click)="diminuir(obj)">-</button>
+        <span>{{obj.quantidade}}</span>
+        <button class="btn-quantidade" (click)="aumentar(obj)">+</button>
+      </div>
+      
+    </div>
+
+    <button class="btn-remover" (click)="remover(obj)">
+      Remover Item
+    </button>
+
+  </div>
+
+  <button *ngIf="lista.length > 0" class="btn-limpar" (click)="limparCarrinho()">
+    Limpar carrinho
+  </button>
+
+  <div *ngIf="lista.length > 0" class="resumo">
+    <h3>Total: {{ total | currency:'BRL':'symbol':'1.2-2' }}</h3>
+
+    <button class="btn-finalizar" (click)="finalizarCompra()">
+      Finalizar Compra
+    </button>
+  </div>
+
+</div>

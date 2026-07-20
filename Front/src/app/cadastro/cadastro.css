@@ -1,0 +1,20 @@
+.btn-success {
+  background: #e28000;
+  border: none;
+  padding: 8px 15px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-success:hover {
+  background: #016924;
+}
+
+.cadastro {
+  padding: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  
+}

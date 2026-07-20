@@ -1,0 +1,51 @@
+<div class="Detalhes-container">
+  <h2 class="titulo-sessao">Detalhes do produto</h2>
+
+  @if(mensagem.length > 0) {
+    <div class="alert alert-danger" style="text-align: center; color: red; margin-bottom: 20px;">
+      <b>{{mensagem}}</b>
+    </div>
+  }
+
+  @if(obj && obj.codigo > 0) {
+    <div class="item-detalhe">
+      <h2 class="produto-nome">{{obj.nome}}</h2>
+      
+      <img src="produto_{{obj.codigo}}.jpg" class="produto-img">
+
+      <div class="produto-info">
+        <p class="produto-descricao">{{obj.descritivo}}</p>
+        
+        <p style="color: #666; font-style: italic;">Cor: {{obj.cor}}</p>
+        
+        <div class="preco-container">
+          @if(obj.promo < obj.valor){
+            <span class="preco-antigo" style="text-decoration: line-through; font-size: 14px; color: #888;">
+              De: {{obj.valor | currency:'BRL'}}
+            </span>
+            <br>
+            <span class="preco-promo">Por: {{obj.promo | currency:'BRL'}}</span>
+          } @else {
+            <span class="preco-normal">{{obj.valor | currency:'BRL'}}</span>
+          }
+        </div>
+
+        <div class="acoes">
+          @if(obj.quantidade > 0){
+            <button class="btn-comprar" (click)="adicionarItemCesta(obj)" style="margin-top: 15px;">
+              <i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho
+            </button>
+          } @else {
+            <div style="margin-top: 15px;">
+              <span class="sem-estoque" style="color: red; font-weight: bold;">Esgotado no Momento</span>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  } @else {
+    <div style="text-align: center; margin-top: 20px;" [hidden]="mensagem.length > 0">
+      <p>Carregando informações da camiseta...</p>
+    </div>
+  }
+</div>

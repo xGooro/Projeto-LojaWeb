@@ -1,0 +1,24 @@
+Create database LojaCamisetas;
+Use LojaCamisetas;
+
+INSERT INTO produto (nome, descritivo, cor, valor, promo, quantidade, destaque, keywords) VALUES 
+('Calma Calabreso', 'Camiseta Calma Calabreso nada séria.', 'laranja', 70.9, 50.9, 15, 1, 'calma, calabresa, calabreso, laranja'),
+('Ratos praianos', 'Camiseta Ratos praianos nada séria.', 'cinza', 70.9, 50.9, 40, 1, 'ratos, praianos, praia, mar, estampa'),
+('Super Romario', 'Camiseta Super Romario nada séria.', 'azul', 70.9, 50.9, 60, 1, 'Romario, super, estampa, nada, seria'),
+('Sonhos', 'Camiseta Sonhos nada séria.', 'azul', 70.9, 50.9, 20, 1, 'Sonhos, estampa, nada, seria'),
+('Cerebro derretido', 'Camiseta Cerebro derretido nada séria.', 'rosa', 70.9, 50.9, 12, 1, 'cerebro, derretido, estampa, nada, seria'),
+('Pagodinho', 'Camiseta Pagodinho nada séria.', 'rosa', 70.9, 50.9, 80, 0, 'zeca, pagodinho, estampa, nada, seria'),
+('Tigrinho', 'Camiseta Tigrinho nada séria.', 'cinza', 70.9, 60.9, 35, 0, 'aviao, tigrinho, estampa, nada, seria'),
+('Fuleco Falido', 'Camiseta Fuleco Falido nada séria.', 'azul', 70.9, 60.9, 25, 0, 'copa, fuleco, estampa, nada, seria'),
+('Reinicia o Moldem', 'Camiseta Reinicia o Moldem nada séria.', 'azul', 80.9, 75.9, 0, 0, 'internet, moldem, estampa, nada, seria'),
+('Odeio Vegetais', 'Camiseta Odeio Vegetais nada séria.', 'cinza', 25.9, 20.9, 10, 0, 'vegetais, estampa, nada, seria'),
+('Navegar', 'Camiseta Navegar nada séria.', 'verde', 50.9, 45.9, 10, 0, 'mapa, navegar, estampa, nada, seria'),
+('Batata', 'Camiseta Batata nada séria.', 'colorida', 50.9, 45.9, 10, 0, 'batata, estampa, nada, seria'),
+('Ovo Pilantra', 'Camiseta Ovo Pilantra nada séria.', 'colorida', 100.9, 70.9, 10, 0, 'doomsday, ovo, estampa, nada, seria'),
+('Shrek Clt', 'Camiseta Shrek Clt nada séria.', 'cinza', 80.9, 50.9, 10, 0, 'clt shrek, estampa, nada, seria'),
+('Queijo Quadrado', 'Camiseta Queijo Quadrado nada séria.', 'verde', 80.9, 70.9, 10, 0, 'queijo, quadrado, estampa, nada, seria'),
+('Foi de Joelma', 'Camiseta Foi de Joelma nada séria.', 'verde', 100.9, 50.9, 10, 0, 'traicao, joelma, estampa, nada, seria'),
+('4:99 da Madrugada', 'Camiseta 4:99 da madrugada nada séria.', 'amarela', 49.9, 48.9, 10, 0, 'larissa, religiao, estampa, nada, seria'),
+('Gatofobico', 'Camiseta Gatofobico nada séria.', 'cinza', 66.9, 56.9, 10, 0, 'humor, gato, estampa, nada, seria'),
+('Mal Calculado', 'Camiseta Mal Calculado nada séria.', 'cinza', 25.9, 20.9, 0, 0, 'matemática, mal calculado, estampa, nada, seria'),
+('Tiazona', 'Camiseta Tiazona nada séria.', 'rosa', 45.9, 40.9, 0, 0, 'camiseta, estampa, nada, seria');

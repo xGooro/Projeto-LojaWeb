@@ -1,0 +1,17 @@
+.texto-login {
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  color: white; 
+}
+
+
+.texto-login:hover {
+  color: var(--amarelo); 
+}
+
+
+.texto-login.usuario-logado:hover {
+  color: var(--vermelho) !important;
+  text-shadow: 0 0 8px rgba(208, 83, 83, 0.6);
+}

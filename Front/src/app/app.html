@@ -1,0 +1,25 @@
+<header class="header">
+  <div class="logo-area">
+    <img src="logo.png" />
+    <h1>Serious Store</h1>
+  </div>
+
+  <app-bemvindo></app-bemvindo>
+
+  <nav class="menu">
+    <a routerLink="/">Home</a>
+    <a routerLink="/vitrine">Vitrine</a>
+    <a routerLink="/pesquisar">Buscar</a>
+    <a routerLink="/cadastro">Cadastro</a>
+    <a routerLink="/contato">Fale Conosco</a>
+    <a routerLink="/cesta">Carrinho <span class="badge">{{totalItens}}</span></a>
+  </nav>
+</header>
+
+<div class="centralizar">
+  <router-outlet></router-outlet>
+</div>
+
+<footer class="footer">
+  <p>A maior (e única) loja de camisetas sérias da internet - da Fatec Ipiranga, pra você.</p>
+</footer>

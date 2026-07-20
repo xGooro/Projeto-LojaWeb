@@ -1,0 +1,87 @@
+/* fundo geral */
+body {
+  background-color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* título */
+.titulo {
+  color: #345995;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* grid */
+.vitrine {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* card */
+.produto-card {
+  background: rgb(255, 255, 255);
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.produto-card:hover {
+  transform: translateY(-5px);
+}
+
+/* imagem */
+.produto-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* nome */
+.produto-card h4 {
+  margin: 10px 0;
+  color: #345995;
+}
+
+/* preço */
+.preco-area {
+  margin: 10px 0;
+}
+
+.preco-antigo {
+  text-decoration: line-through;
+  color: #999;
+  display: block;
+}
+
+.preco {
+  font-size: 20px;
+  font-weight: bold;
+  color: #D05353; /* vermelho da paleta */
+}
+
+/* botão */
+.produto-card button {
+  background: #e28000;
+  border: none;
+  padding: 8px 15px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.produto-card button:hover {
+  background: #016924;
+}
+
+/* sem estoque */
+.sem-estoque {
+  color: #D05353;
+  font-weight: bold;
+}

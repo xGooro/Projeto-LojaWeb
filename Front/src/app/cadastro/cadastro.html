@@ -1,0 +1,39 @@
+
+
+<div class="alert alert-success" *ngIf="mensagem.length>0">
+<b>{{mensagem}}</b>
+</div>
+<br>
+<div class="cadastro">
+
+<h2>Cadastro</h2>
+
+<br>{{tituloAcao}}<br>
+
+<br>
+
+<div class="form-label">nome:</div>
+<input type="text" class="form-control" [(ngModel)]="obj.nome"><br>
+
+<div class="form-label">email:</div>
+<input type="email" class="form-control" [(ngModel)]="obj.email"><br>
+
+<div class="form-label">senha:</div>
+<input type="password" class="form-control" [(ngModel)]="obj.senha"><br>
+
+<div class="form-label">Telefone:</div>
+<input type="text" class="form-control" [(ngModel)]="obj.telefone" mask="(00) 00000-0000">
+
+<div class="form-label">CPF:</div>
+<input type="text" class="form-control" [(ngModel)]="obj.documento" mask="000.000.000-00">
+
+<div class="form-label">CEP:</div>
+<input type="text" class="form-control" [(ngModel)]="obj.cep" mask="00000-000">
+
+<div class="form-label">Endereço:</div>
+<textarea class="form-control" [(ngModel)]="obj.logradouro"></textarea>
+
+<br><br>
+</div>
+<button class="btn-success" (click)="cadastrar();">Salvar</button>
+  

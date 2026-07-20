@@ -1,0 +1,54 @@
+<div class="pesquisa-container">
+
+  <h2>🔍 Buscar camisetas feias</h2>
+
+  <!-- BUSCA -->
+  <input
+    type="text"
+    [(ngModel)]="busca"
+    placeholder="Buscar por nome..."
+    class="input-busca"
+  />
+
+  <!-- FILTROS -->
+  <div class="filtros">
+
+
+    <select [(ngModel)]="cor">
+      <option value="">Cor</option>
+      <option>laranja</option>
+      <option>Cinza</option>
+      <option>Azul</option>
+      <option>Rosa</option>
+      <option>Verde</option>
+      <option>Colorida</option>
+    </select>
+
+    <input
+      type="number"
+      [(ngModel)]="precoMax"
+      placeholder="Preço máximo"
+    />
+
+  </div>
+
+  <!-- RESULTADOS -->
+  <div class="vitrine">
+
+    @for (obj of listaFiltrada(); track obj.codigo) {
+
+      <div class="produto-card">
+
+        <img src="produto_{{obj.codigo}}.jpg"(click)="redirecionar(obj);">
+
+        <h4>{{obj.nome}}</h4>
+
+        <p class="preco">R$ {{obj.valor}}</p>
+
+      </div>
+
+    }
+
+  </div>
+
+</div>

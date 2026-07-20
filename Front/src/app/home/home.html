@@ -1,0 +1,26 @@
+<section class="hero">
+  <div class="hero-overlay">
+    <h1>Camisetas Sérias & Inesquecíveis</h1>
+    <p>As estampas nada sérias que você vai  amar usar</p>
+    <button class="btn-hero" routerLink="/vitrine">Ver coleção</button>
+  </div>
+</section>
+
+<section class="destaques">
+  <h2 style="text-align: center">Menos sérias da Semana</h2>
+
+  <div class="vitrine">
+@for (obj of lista; track obj.codigo) {
+
+  <div class="produto-card">
+
+    <img src="produto_{{obj.codigo}}.jpg"
+         (click)="redirecionar(obj);">
+
+    <h4>{{obj.nome}}</h4>
+
+  </div>
+
+}
+</div>
+</section>
